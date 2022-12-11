@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- * main - Entry point
- * Description: checks on the last digit of the assigned var
- * Return: Always 0 (success)
+ * main - Entry block
+ * Description: Get a random number check its last digit and compare it with 5
+ * Return: 0
  */
 int main(void)
 {
