@@ -1,20 +1,18 @@
-include <stdio.h>
-include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
- * main - main block
- * Description: Get a random it with 5
- * Return: 0
- */
+*main - Program to print alphabet letter followed by new line
+*
+*Return: return 0
+*/
 int main(void)
-
-
-	char c = 'a';
-
-	while (c <= 'z')
-	{
-		putchar(c)
-		c++;	
-	}
+{
+	int letter;
 	
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		letter = tolower(letter);
+		putchar(letter);
+	}
 	putchar('\n');
-	return (0);
+	return (0)
