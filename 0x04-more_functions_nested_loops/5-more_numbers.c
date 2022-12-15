@@ -1,4 +1,3 @@
-s (22 sloc) 335 Bytes
 #include "main.h"
 /**
 *more_numbers - prints numbers to 14
