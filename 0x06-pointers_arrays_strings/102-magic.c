@@ -1,34 +1,19 @@
-#include "main.h"
+#include <stdio.h>
+/**
+ *Add one line to this code, so that the program prints a[2] = 98, followed by a new line.
+ */
 
-
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+int main(void)
 {
-}
+	int n;
+	int a[5];
+	int *p;
 
-char *add_strings(char *n1, char *n2, char *r, int r_index)
-{
-	int num, tens = 0;
-
-	for (; *n1 && *n2; n1--, n2--, r_index--)
-	{
-		num = (*n1 - '0') + (*n2 - '0');
-		num += tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	for (; *n1; n1--; r_index++)
-	{
-		num = *(n1 - '0') + tens; 
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	for (; *n2; n2--;  r_index--)
-	{
-		num = (*n2 - '0') + tens; 
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10; 
-	}
+	a[2] = 1024;
+	p = &n;
 	
+  *(p + 5) = 98;
+	
+	printf("a[2] = %d\n", a[2]);
+	return (0);
 }
