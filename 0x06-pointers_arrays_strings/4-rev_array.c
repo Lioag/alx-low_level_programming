@@ -1,40 +1,16 @@
 #include "main.h"
+
 /**
-* Write a function that reverses the content of an array of integers
+*  Write a function that reverses the content of an array of integer
 */
-void print_buffer(char *b, int size)
+
+void reverse_array(int *a, int n)
 {
-	int i = 0, j;
-
-	if (size < 0)
-	{
-		printf('\n');
-		return;
-	}
-
-	while (i < size)
-	{
-		if (i % 10 == 0)
-			printf("%08x: ", i);
-		for (j = i; j < i + 9; j += 2)
-		{
-			if ((j < size) && ((j + 1) < size))
-				printf("%02x%02x: ", b[j], b[j + 1]);
-			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
-				printf(" ");
-			}
-		}
-		for (j = i; j < i + 9 && j < size; j++)
-		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
-			else
-				printf(".");
-		}
-		printf('\n');
-		i += 10;
-	}
+int tmp, index;
+for (index = n - 1; index > n / 2; index--)
+{
+tmp = a[n - 1 - index];
+a[n - 1 - index] = a[index];
+a[index] = tmp;
+}
 }
